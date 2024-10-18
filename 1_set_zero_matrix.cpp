@@ -21,7 +21,7 @@ void markCol(vector<vector<int>> &matrix, int n, int m, int j) {
     }
 }
 
-vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) {
+vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) { //arguments
 
     // Set -1 for rows and cols
     // that contains 0. Don't mark any 0 as -1:
@@ -49,20 +49,27 @@ vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) {
 
 int main()
 {
+
+
+    //params and arguments
+
+
     vector<vector<int>> matrix = 
     {
-        {1, 1, 1}, 
-        {1, 1, 1}, 
-        {0, 1, 1}
+        {1, 1, 1} , 
+        {1, 1, 1} , 
+        {0, 1, 1} ,
+        {1, 1, 1} , 
     };
 
-    int n = matrix.size(); //3
+    int n = matrix.size(); //4
     int m = matrix[0].size(); //3
 
-    vector<vector<int>> ans = zeroMatrix(matrix, n, m);
+    vector<vector<int>> ans = zeroMatrix(matrix, n, m);//params
 
     cout << "The Final matrix is: \n";
-    for (auto row : ans) {
+
+    for (auto row : matrix) {
         for (auto ele : row) {
             cout << ele << " ";
         }
@@ -70,3 +77,6 @@ int main()
     }
     return 0;
 }
+
+
+
