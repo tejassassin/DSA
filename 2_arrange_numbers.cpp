@@ -23,17 +23,19 @@ int main()
             mid++;
         }
 
+        else if (numbers[mid] == 1) {
+                mid++;
+        }
+        
         else if (numbers[mid]==2){
             int tmp = numbers[high];
             numbers[high] = numbers[mid];
             numbers[mid] = tmp;
 
             high--;
+
         }
 
-        else if (numbers[mid] == 1) {
-                mid++;
-        }
 
     }
 
