@@ -5,49 +5,45 @@ int main()
 {
 
 
-    vector<int> numbers = {}; //n = 7  //numbers.size()
+    vector<int> numbers = {0,1,1,2,0,2,2}; //n = 7  //numbers.size()
                          //0,1,2,3,4,5,6   // 0 - (n-1)   ->  0 - 6
     
-    //ans = {0,0,0,1,1,2,2}
+    int n = numbers.size();
 
-    int n = numbers.size(); //7
+    int low=0, mid =0, high=n-1;
 
-    int count_0 = 0;
-    int count_1 = 0;
-    int count_2 = 0;
+    while(mid <= high){
 
+        if(numbers[mid] == 0){
+            int tmp = numbers[low];
+            numbers[low] = numbers[mid];
+            numbers[mid] = tmp;
 
-    for(auto ele : numbers){ // for each element in array
-        if (ele == 0){
-            count_0 = count_0 +1;
+            low++;
+            mid++;
         }
-        
-        else if (ele == 1){
-            count_1 = count_1 +1;
+
+        else if (numbers[mid]==2){
+            int tmp = numbers[high];
+            numbers[high] = numbers[mid];
+            numbers[mid] = tmp;
+
+            high--;
         }
-        
-        else {
-            count_2 = count_2 +1;
+
+        else if (numbers[mid] == 1) {
+                mid++;
         }
+
     }
 
-    vector<int> ans = {};
-
-    for (int i=0;i<count_0;i++){
-        ans.push_back(0);
-    }
-
-    for (int i=0;i<count_1;i++){
-        ans.push_back(1);
-    }
-
-   for (int i=0;i<count_2;i++){
-        ans.push_back(2);
-    }
-
-    for(auto ele : ans){
+ 
+    for(auto ele: numbers){
         cout<<ele<<" ";
     }
+    cout<<endl;
+
+  
 }
 
 
