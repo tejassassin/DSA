@@ -13,7 +13,6 @@ int main()
     int low=0, mid =0, high=n-1;
 
     while(mid <= high){
-
         if(numbers[mid] == 0){
             int tmp = numbers[low];
             numbers[low] = numbers[mid];
