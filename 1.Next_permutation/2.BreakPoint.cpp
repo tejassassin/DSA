@@ -2,6 +2,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/** Time Complexity : O(3n)
+ * Explanation: We find the break point, 
+ * then we find the next greater elemenet in the right array and 
+ * then we swap with the break point element and reverse the entire array
+ * each of these takes O(n) so total time complexity is O(3n) 
+ * 
+ * Space Complexity : O(1)
+ * Explanation : we are not storing any data anywhere and the changes are made in-place to O(1)
+ * **/
+
 vector<int> nextGreaterPermutation(vector<int> &A) {
     int n = A.size(); 
 

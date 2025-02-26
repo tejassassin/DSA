@@ -2,10 +2,20 @@
 #include <vector>  
 #include <algorithm>
 
-
 using namespace std;
 
-
+/** Time Complexity : O(n x n!)
+ * Explanation: If we draw out the entire recursion tree. There are n! leaf nodes. The total numbers of possible arragenments are n!.
+ * To reach each of these leaf nodes the depth is n so O(n) work is done to reach each of these leaf nodes. The extra for loop is what is causing the n.
+ * So total work done is O(n x n!) to find all the permutations.
+ * 
+ * To search for the next permutation we have to again do O(n x n!) work as there are total n! permutations and each of them as n elements to be compared
+ * 
+ * 
+ * Space Complexity : O(n x n!)
+ * Explanation : we are storing all permutations in ans array which takes O(n x n!) space 
+ * and also there will psace used for recursion depth O(n)
+ * **/
 
 void RecurPermute(int index, vector<int> &nums, vector<vector<int>> &ans){
     if(index == nums.size())
