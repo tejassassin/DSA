@@ -8,7 +8,7 @@ using namespace std;
  * Space Complexity : O(n^2) 
  * For storing the answer. Worst case n^2 triplets. 
  * There are total O(n^3) no of triplets but we are not storing all of them as we are not storing duplicates, 
- * for each element a there is a pair (b, c) at max n pairs so n^2. 
+ * for each element a there is a pair (b, c), at max n pairs so n^2. 
  * **/
 
 
